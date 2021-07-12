@@ -22,8 +22,8 @@ public class ResidenciaService {
     }
 
     // metodo salvar
-    public Residencia save(Residencia Residencia, Errors errors) {
-        return ResidenciaRepository.save(Residencia);
+    public Residencia save(Residencia residencia, Errors errors) {
+        return ResidenciaRepository.save(residencia);
     }
 
     //metodo deletar

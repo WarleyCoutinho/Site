@@ -1,4 +1,6 @@
-package br.com.site.backend.domain.bairros;
+package br.com.site.backend.domain.cidade;
+
+import br.com.site.backend.domain.bairro.Bairro;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
@@ -9,10 +11,10 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name = "bairros")
+@Table(name = "cidade")
 @Getter
 @Setter
-public class Bairros implements Serializable {
+public class Cidade implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,11 +24,7 @@ public class Bairros implements Serializable {
     @Column(name="nome")
     private String nome;
 
-    @Column(name="cidade")
-    private String cidade;
-
-    //@JoinColumn(name = "bairros_id", referencedColumnName = "id")
-    //@ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL )
-    //private Bairros bairros;
-
+    @JsonIgnore
+    @OneToMany(mappedBy = "cidade")
+    private List<Bairro> BairroListBairros;
 }

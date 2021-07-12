@@ -1,14 +1,13 @@
 package br.com.site.backend.domain.residencia;
 
-import br.com.site.backend.domain.bairros.Bairros;
-import com.fasterxml.jackson.annotation.JsonFormat;
+import br.com.site.backend.domain.bairro.Bairro;
+import br.com.site.backend.domain.endereco.Endereco;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.format.annotation.DateTimeFormat;
+
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
 
 @Entity
 @Table(name = "residencia")
@@ -26,13 +25,19 @@ public class Residencia implements Serializable {
     private String tipo;
 
     @Column(name="valor")
-    private Number valor;
+    private String valor;
 
     @Column(name="comodos")
-    private Number comodos;
+    private String comodos;
 
 
-   // @JoinColumn(name = "bairros_id", referencedColumnName = "id")
-   // @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL )
-    //private Bairros bairros;
+         @JoinColumn(name = "endereco_id", referencedColumnName = "id")
+         @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL )
+         private Endereco endereco;
+
+       //   confirmação da tabela bairro co a tabela de residencia
+        //@JoinColumn(name = "bairros_id", referencedColumnName = "id")
+        //@ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL )
+        //private Bairro bairro;
+
 }

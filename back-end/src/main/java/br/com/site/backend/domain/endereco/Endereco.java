@@ -26,11 +26,11 @@ public class Endereco implements Serializable {
     @Column(name="complemento")
     private String complemento;
 
-    @Column(name="bairros")
-    private String bairros;
+    @Column(name="bairro")
+    private String bairro;
 
-    @Column(name="cidades")
-    private String cidades;
+    @Column(name="cidade")
+    private String cidade;
 
     @Column(name="estado")
     private String estado;
@@ -38,7 +38,7 @@ public class Endereco implements Serializable {
     @Column(name="país")
     private String país;
 
-    //@JsonIgnore
-   // @OneToMany(mappedBy = "residencia")
-   // private List<Residencia> residenciaList;
+    @JsonIgnore
+    @OneToMany(mappedBy = "endereco")
+    private List<Residencia> ResidenciaList;
 }

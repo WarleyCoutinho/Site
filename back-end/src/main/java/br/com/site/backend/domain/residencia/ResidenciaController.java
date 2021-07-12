@@ -24,14 +24,14 @@ public class ResidenciaController extends ReplyAbstractController {
 
     // salvar no banco de dados
     @PostMapping
-    public ResponseEntity<?> save(@Validated @RequestBody Residencia Residencia, Errors errors){
-        return jsonResponse(ResidenciaService.save(Residencia, errors));
+    public ResponseEntity<?> save(@Validated @RequestBody Residencia residencia, Errors errors){
+        return jsonResponse(ResidenciaService.save(residencia, errors));
     }
 
     // Atualizar no banco de dados
     @PutMapping
-    public ResponseEntity<?> update(@Validated @RequestBody Residencia Residencia, Errors errors){
-        return jsonResponse(ResidenciaService.save(Residencia, errors));
+    public ResponseEntity<?> update(@Validated @RequestBody Residencia residencia, Errors errors){
+        return jsonResponse(ResidenciaService.save(residencia, errors));
     }
 
     //deletar por id no banco de dados
