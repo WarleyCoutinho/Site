@@ -1,0 +1,20 @@
+:host ::ng-deep .required-label label::after {
+  content: "*";
+  color: red;
+  font-size: 1rem;
+}
+
+:host ::ng-deep .has-error input {
+  border-color: red;
+}
+:host ::ng-deep .has-success input {
+  border-color: green;
+}
+
+.has-error span {
+  color: red;
+}
+
+.has-success span {
+  color: green;
+}

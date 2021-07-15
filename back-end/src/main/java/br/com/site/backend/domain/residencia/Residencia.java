@@ -1,6 +1,6 @@
 package br.com.site.backend.domain.residencia;
 
-import br.com.site.backend.domain.bairro.Bairro;
+
 import br.com.site.backend.domain.endereco.Endereco;
 import lombok.Getter;
 import lombok.Setter;

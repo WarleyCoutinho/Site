@@ -1,0 +1,8 @@
+<div [ngClass]="optionClass()" [ngClass]="required ? 'required-label' : ''">
+  <ng-content select="[label]"></ng-content>
+  <ng-content select="[input]"></ng-content>
+
+  <span *ngIf="hasError()"> Preencha esse campo</span>
+
+  <span *ngIf="hasSuccess()">Campo Preenchido com sucesso</span>
+</div>

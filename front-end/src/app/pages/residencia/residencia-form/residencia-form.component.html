@@ -1,0 +1,136 @@
+<div class="card">
+  <div class="car-body">
+    <form [formGroup]="residenciaForm">
+      <div class="row">
+        <div class="col-md-4">
+          <app-field-validation [required]="true">
+            <label label for="tipo" class="form-label"
+              >Casa / Apartamento</label
+            >
+            <input
+              input
+              formControlName="tipo"
+              type="text"
+              id="tipo"
+              class="form-control"
+            />
+          </app-field-validation>
+        </div>
+        <div class="col-md-4">
+          <app-field-validation [required]="true">
+            <label label for="valor" class="form-label">Valor do Imóveil</label>
+            <input
+              input
+              formControlName="valor"
+              type="text"
+              id="valor"
+              class="form-control"
+            />
+          </app-field-validation>
+        </div>
+        <div class="col-md-4">
+          <app-field-validation [required]="true">
+            <label label for="comodos" class="form-label">Cômodos</label>
+            <input
+              input
+              formControlName="comodos"
+              type="number"
+              id="comodos"
+              class="form-control"
+            />
+          </app-field-validation>
+        </div>
+      </div>
+      <div class="row" formGroupName="endereco">
+        <div class="col-md-4">
+          <app-field-validation [required]="true">
+            <label label for="logradouro" class="form-label">Logradouro</label>
+            <input
+              input
+              formControlName="logradouro"
+              type="text"
+              id="logradouro"
+              class="form-control"
+            />
+          </app-field-validation>
+        </div>
+        <div class="col-md-4">
+          <app-field-validation [required]="true">
+            <label label for="complemento" class="form-label"
+              >Complemento</label
+            >
+            <input
+              input
+              formControlName="complemento"
+              type="text"
+              id="complemento"
+              class="form-control"
+            />
+          </app-field-validation>
+        </div>
+        <div class="col-md-4">
+          <app-field-validation [required]="true">
+            <label label for="bairro" class="form-label">Bairro</label>
+            <input
+              input
+              formControlName="bairro"
+              type="text"
+              id="bairro"
+              class="form-control"
+            />
+          </app-field-validation>
+        </div>
+      </div>
+      <div class="row"formGroupName="endereco">
+        <div class="col md-4">
+          <app-field-validation [required]="true">
+            <label label for="cidade" class="form-label">Cidade</label>
+            <input
+              input
+              formControlName="cidade"
+              type="text"
+              id="cidade"
+              class="form-control"
+            />
+          </app-field-validation>
+        </div>
+        <div class="col md-4">
+          <app-field-validation [required]="true">
+            <label label for="estado" class="form-label">Estado</label>
+            <input
+              input
+              formControlName="estado"
+              type="text"
+              id="estado"
+              class="form-control"
+            />
+          </app-field-validation>
+        </div>
+        <div class="col md-4">
+          <app-field-validation [required]="true">
+            <label label for="pais" class="form-label">País</label>
+            <input
+              input
+              formControlName="pais"
+              type="text"
+              id="pais"
+              class="form-control"
+            />
+          </app-field-validation>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer">
+    <div class="buttons float-right">
+      <div *ngIf="action !== 'visualizar'">
+        <button class="btn btn-success" (click)="onSave()">Salvar</button>
+        <button class="btn btn-danger" (click)="onCancel()">Cancelar</button>
+      </div>
+      <div *ngIf="action === 'visualizar'">
+        <button class="btn btn-default" (click)="onAlterar()">Alterar</button>
+        <button class="btn btn-default" (click)="onCancel()">Voltar</button>
+      </div>
+    </div>
+  </div>
+</div>

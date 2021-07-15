@@ -35,8 +35,8 @@ public class Endereco implements Serializable {
     @Column(name="estado")
     private String estado;
 
-    @Column(name="país")
-    private String país;
+    @Column(name="pais")
+    private String pais;
 
     @JsonIgnore
     @OneToMany(mappedBy = "endereco")

@@ -1,0 +1,53 @@
+<body class="content">
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+  <header id="header">
+    <nav class="container">
+      <a class="logo" href="#">Wc <span> System</span>.</a>
+      <!--_________MENU__________ -->
+      <div class="menu">
+        <ul class="grid">
+          <li><a class="title" href="#home">home</a></li>
+          <li><a class="title" href="#city">Cidades</a></li>
+          <li><a class="title" href="#district">Bairros</a></li>
+          <li><a class="title" href="#house">Casas</a></li>
+          <li><a class="title" href="#apartment">Apartamentos</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div>
+    
+    <main class="main">
+      <!--_________HOME__________ -->
+      <section class="section" id="home">
+        <div class="container grid"></div>
+      </section>
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+
+  <footer class="section">
+    <div class="container grid">
+      <div class="brand">
+        <a class="logo logo-alt" href="#home">Wc<span> System</span>.</a>
+        <p>©2021 Wc-System.</p>
+        <p>Todos os direitos reservados.</p>
+      </div>
+      <div class="social grid">
+        <a href="https://instagram.com" target="_blank">
+          <i class="fa fa-instagram fa-fw"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank">
+          <i class="fa fa-facebook fa-fw"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="fa fa-youtube fa-fw"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>

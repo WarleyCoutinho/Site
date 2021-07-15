@@ -1,0 +1,80 @@
+
+.menu .grid {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  
+}
+.menu .grid .title{
+  justify-content: center;
+}
+.grid {
+  display: grid; 
+  gap: 2rem;
+  cursor: pointer;
+  
+}
+.grid li{
+  display: grid;
+ 
+}
+
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#header {
+  border-bottom: 1px solid #ebe4e4;
+  margin-bottom: 2rem;
+  display: flex;
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+
+  background-color: #e9e2e2;
+  width: 100%;
+}
+
+ 
+
+footer {
+  background: #e9e2e2;
+  min-height: 7.5rem;
+}
+
+footer .logo {
+  display: inline-block;
+  color: #ce2e12;
+  font-size: 1.5rem;
+}
+
+footer .brand p {
+  color: #ec920c;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+footer i {
+  font-size: 1.5rem;
+  color: #e70800;
+  
+}
+
+footer .social {
+  grid-auto-flow: column;
+  justify-content: center;
+}
+
+footer .social a {
+  transition: 0.3s;
+}
+
+footer .social a:hover {
+  transform: translateY(-8px);
+}
+

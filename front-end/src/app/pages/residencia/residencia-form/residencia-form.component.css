@@ -1,0 +1,13 @@
+.buttons  button {
+  margin-left: 1.5rem; 
+}
+.buttons:active {
+  transform: scale(1.05);
+}
+
+.card {
+  min-width: 50rem;
+}
+.row {
+  margin: 1.5rem 0;
+}
