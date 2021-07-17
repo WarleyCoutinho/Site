@@ -1,37 +1,28 @@
 <body class="content">
-  <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
-
-
-
-  <header id="header">
-    <nav class="container">
-      <a class="logo" href="#">Wc <span> System</span>.</a>
-      <!--_________MENU__________ -->
+   <header id="header">
+     <nav class="container">
+      <div class="logo">
+        <a  href="#">Wc <span> System</span>.</a>
+      </div>
       <div class="menu">
         <ul class="grid">
-         
           <li><a class="title" href="cidades">Lista de Cidades</a></li>
           <li><a class="title" href="bairros">Lista de Bairro</a></li>
-          <li><a class="title" href="residencias">Lista de Residencias</a></li>
-          
+          <li><a class="title" href="residencias">Lista de Residencias</a></li> 
         </ul>
       </div>
     </nav>
   </header>
-  <div>
-    
+  
+ 
     <main class="main">
-      <!--_________HOME__________ -->
-      <section class="section" id="home">
-        <div class="container grid"></div>
-      </section>
-      <router-outlet></router-outlet>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
     </main>
-  </div>
+ 
 
-  <footer class="section">
+  <footer>
     <div class="container grid">
       <div class="brand">
         <a class="logo logo-alt" href="#">Wc<span> System</span>.</a>

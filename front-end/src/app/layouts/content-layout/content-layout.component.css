@@ -1,15 +1,28 @@
 
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+}
+#header .logo a {
+  color: #06f019;
+  font-size: 1.5rem;
+  text-shadow: 0.0625rem 0.0625rem 0.0625rem black;
+}
 .menu .grid {
   height: 2rem;
   display: flex;
   justify-content: center;
+  cursor: pointer;
+  text-shadow: 0.0625rem 0.0625rem 0.0625rem black;
   
 }
 
 .grid {
   display: grid; 
   gap: 6rem;
-  cursor: pointer;
+  
   
 }
 .grid li{
@@ -18,62 +31,71 @@
 
 
 .main {
-  min-height: 100vh;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100vw;
+  height: 100vw;
+  background:url("../../../assets/fotos/CasaxApartamento.png");
+
 }
-#header {
+#header  {
   border-bottom: 0.0625rem solid #ebe4e4;
   margin-bottom: 2rem;
   display: flex;
   position: fixed;
+  width: 100%;
   top: 0rem;
   left: 0rem;
-
-  background-color: #e9e2e2;
-  width: 100%;
+  background-color: #dfdfdf;
 }
-
+#header a{
+  color: #ec0c0c;
+}
  
 
-footer {
-  background: #e9e2e2;
-  margin-bottom: -2rem;
+footer  {
+  background-color: #dfdfdf;
+}
+
+.brand p {
+  color: #ec0c0c;
+  margin-bottom: 0.0.625rem ;
+  display: flex;
+  justify-content: center;
+  text-shadow: 0.0625rem 0.0625rem 0.0625rem black;
+ 
+}
+
+footer i  {
+  font-size: 1.5rem;
+  color: #ec0c0c;
+  text-shadow: 0.0625rem 0.0625rem 0.0625rem  black;
+  
+}
+.social {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  text-shadow: 0.0625rem 0.0625rem 0.0625rem black;
 }
 
 footer .logo {
-  margin-bottom: 0.0.625rem;
-  display: inline-block;
-  color: #ce2e12;
+  color: #4412ce;
   font-size: 1.5rem;
+  text-shadow: 0.0625rem 0.0625rem 0.0625rem  black;
+
 }
 
-footer .brand p {
-  color: #ec920c;
-  margin-bottom: 0.0.625rem;
-  display: flex;
-  justify-content: center;
- 
+.social a {
+  transition: 0.1s;
 }
 
-footer i {
-  font-size: 1.5rem;
-  color: #e70800;
-  min-height: 5.5rem;
-  
-}
-
-footer .social {
-  grid-auto-flow: column;
-  justify-content: center;
-}
-
-footer .social a {
-  transition: 0.3s;
-}
-
-footer .social a:hover {
-  transform: translateY(-8px);
+.social a:hover {
+  transform: translateY(0.5rem);
 }
 

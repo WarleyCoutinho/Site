@@ -23,13 +23,16 @@ public class Bairro implements Serializable {
     @Column(name = "id", nullable = false)
     private long id;
 
+
     @Column(name = "bairro")
     private String bairro;
+
 
 
     @JoinColumn(name = "cidade_id", referencedColumnName = "id")
     @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL )
     private Cidade cidade;
+
 
 
     @JsonIgnore

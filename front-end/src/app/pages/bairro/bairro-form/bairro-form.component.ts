@@ -13,6 +13,7 @@ export class BairroFormComponent implements OnInit {
   bairroForm: FormGroup = this.builder.group({});
 
   action: string = '';
+  residenciaForm: any;
   
 
     constructor(
@@ -42,11 +43,11 @@ export class BairroFormComponent implements OnInit {
   createForm(): void {
        this.bairroForm = this.builder.group({
        id: null,
-       bairro: [null,[Validators.required,Validators.maxLength(120)]],
+       bairro: [null,[Validators.required,Validators.maxLength(20)]],
     });
   }
-  //Metodo pra tira os erro no campos obrigatorio de endereço
-   
+  
+  
 
    onSave(): void {
      // console.log(this.bairroForm);
@@ -57,6 +58,7 @@ export class BairroFormComponent implements OnInit {
      Object.keys(this.bairroForm.controls)
      .forEach((field) => this.bairroForm
      .get(field)?.markAsTouched());
+
 
    // função validar campo do formulario
     if(this.bairroForm.invalid) {

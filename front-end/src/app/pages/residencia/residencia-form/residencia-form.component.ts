@@ -48,13 +48,13 @@ export class ResidenciaFormComponent implements OnInit {
        this.residenciaForm = this.builder.group({
        id: null,
        tipo: [null,[Validators.required,Validators.maxLength(20)]],
-       valor: [null,[Validators.required,Validators.maxLength(30)]],
-       comodos: [null,[Validators.required,Validators.maxLength(30)]],
+       valor: [null,[Validators.required,Validators.maxLength(10)]],
+       comodos: [null,[Validators.required,Validators.maxLength(10)]],
 
        endereco: this.builder.group ({
         id: null,
-        logradouro: [null,[Validators.required,Validators.maxLength(120)]],
-        complemento: [null,[Validators.required,Validators.maxLength(120)]],
+        logradouro: [null,[Validators.required,Validators.maxLength(50)]],
+        complemento: [null,[Validators.required,Validators.maxLength(50)]],
         estado: [null,[Validators.required,Validators.maxLength(20)]],
         pais: [null,[Validators.required,Validators.maxLength(20)]],
 
