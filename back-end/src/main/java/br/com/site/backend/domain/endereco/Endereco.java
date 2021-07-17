@@ -26,12 +26,6 @@ public class Endereco implements Serializable {
     @Column(name="complemento")
     private String complemento;
 
-    @Column(name="bairro")
-    private String bairro;
-
-    @Column(name="cidade")
-    private String cidade;
-
     @Column(name="estado")
     private String estado;
 

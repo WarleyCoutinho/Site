@@ -1,14 +1,17 @@
 export interface Residencia {
   id:number;
-  tipo: string;
+  tipo: CharacterData;
+  
+  valor: number;
+  comodos: CharacterData ;
 
   logradouro: string;
   complemento: string;
-  bairro: string;
-  cidade: string;
   estado: string;
   pais: string;
 
-  valor: string;
-  comodos: string;
+  cidade: CharacterData;
+
+  bairro: string;
+
 }

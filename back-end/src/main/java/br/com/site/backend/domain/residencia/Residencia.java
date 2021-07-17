@@ -1,7 +1,10 @@
 package br.com.site.backend.domain.residencia;
 
 
+import br.com.site.backend.domain.bairro.Bairro;
+import br.com.site.backend.domain.cidade.Cidade;
 import br.com.site.backend.domain.endereco.Endereco;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,7 +28,7 @@ public class Residencia implements Serializable {
     private String tipo;
 
     @Column(name="valor")
-    private String valor;
+    private String  valor;
 
     @Column(name="comodos")
     private String comodos;
@@ -35,9 +38,13 @@ public class Residencia implements Serializable {
          @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL )
          private Endereco endereco;
 
-       //   confirmação da tabela bairro co a tabela de residencia
-        //@JoinColumn(name = "bairros_id", referencedColumnName = "id")
-        //@ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL )
-        //private Bairro bairro;
+
+        @JoinColumn(name = "bairro_id", referencedColumnName = "id")
+        @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL )
+        private Bairro bairro;
+
+        @JoinColumn(name = "cidade_id", referencedColumnName = "id")
+        @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL )
+        private Cidade cidade;
 
 }

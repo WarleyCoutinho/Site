@@ -1,7 +1,6 @@
 package br.com.site.backend.domain.bairro;
 
 
-import br.com.site.backend.domain.cidade.Cidade;
 import br.com.site.backend.response.controller.ReplyAbstractController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

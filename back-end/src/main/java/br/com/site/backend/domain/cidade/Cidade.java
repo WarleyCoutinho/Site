@@ -21,10 +21,10 @@ public class Cidade implements Serializable {
     @Column(name = "id", nullable = false)
     private long id;
 
-    @Column(name="nome")
-    private String nome;
+    @Column(name="cidade")
+    private String cidade;
 
     @JsonIgnore
     @OneToMany(mappedBy = "cidade")
-    private List<Bairro> BairroListBairros;
+    private List<Bairro> ListBairro;
 }

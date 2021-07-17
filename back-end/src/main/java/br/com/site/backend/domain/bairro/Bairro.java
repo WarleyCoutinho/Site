@@ -3,6 +3,8 @@ package br.com.site.backend.domain.bairro;
 import br.com.site.backend.domain.cidade.Cidade;
 
 
+import br.com.site.backend.domain.residencia.Residencia;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,21 +23,18 @@ public class Bairro implements Serializable {
     @Column(name = "id", nullable = false)
     private long id;
 
-    @Column(name = "nome")
-    private String nome;
-
-    @Column(name = "cidades")
-    private String cidades;
+    @Column(name = "bairro")
+    private String bairro;
 
 
     @JoinColumn(name = "cidade_id", referencedColumnName = "id")
     @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL )
     private Cidade cidade;
 
-    //ligar tabela bairro coma tabela residencia
-    //@JsonIgnore
-    //@OneToMany(mappedBy = "bairro")
-    //private List<Residencia> ResidenciaList;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "bairro")
+    private List<Residencia> ResidenciaList;
 
 
 }

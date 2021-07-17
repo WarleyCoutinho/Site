@@ -1,1 +1,23 @@
-<p>bairro-list works!</p>
+<div class="card">
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Bairros</th>
+          <th scope="col" class="text-center"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bairro of bairroList">
+          <td>{{ bairro.id }}</td>
+          <ol class="list-group list-group-numbered">
+            <a class="list-group-item"[routerLink]="['visualizar', bairro.id]">
+              {{ bairro.bairro }}
+            </a>
+          </ol>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

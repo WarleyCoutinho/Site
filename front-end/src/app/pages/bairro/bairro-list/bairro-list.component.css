@@ -1,0 +1,27 @@
+table {
+  min-width: 50rem;
+}
+.card {
+  margin: 6.25rem 0;
+}
+.card-body button {
+  margin-bottom: 0rem 1.5rem;
+}
+.buttons button {
+  margin: 0rem 0.75rem ;
+}
+.buttons:active {
+  transform: scale(1.05);
+}
+td {
+  vertical-align: middle;
+  text-align: center;
+}
+ol {
+  vertical-align: middle;
+  text-align: center;
+}
+tr{
+  vertical-align: middle;
+  text-align: center;
+}

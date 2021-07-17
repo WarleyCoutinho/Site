@@ -16,6 +16,7 @@ export class ResidenciaListComponent implements OnInit {
 
   ngOnInit(): void {
     this.findAll();
+    
   }
 
   findAll(): void{

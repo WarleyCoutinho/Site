@@ -8,15 +8,12 @@
           <th scope="col">Imoveis</th>
           <th scope="col">Valor do aluguel</th>
           <th scope="col">Cômodos</th>
-          <th scope="col">Bairro</th>
-          <th scope="col">Imagens</th>
           <th scope="col" class="text-center">ações</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let residencia of residenciaList">
           <td>{{ residencia.id }}</td>
-
           <td class="btn tex-primary">
             <a [routerLink]="['visualizar', residencia.id]">
               {{ residencia.tipo }}
@@ -25,18 +22,6 @@
           <td>{{ residencia.valor }}</td>
           <td>
             {{ residencia.comodos }}
-          </td>
-          <td>
-            {{ residencia.bairro }}
-          </td>
-          <td>
-            <div class="img">
-              <img
-                src="../../../../assets/Apartamentos.jpg"
-                class="rounded"
-                alt="..."
-              />
-            </div>
           </td>
           <td class="text-center buttons">
             <button

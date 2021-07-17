@@ -5,18 +5,15 @@
   justify-content: center;
   
 }
-.menu .grid .title{
-  justify-content: center;
-}
+
 .grid {
   display: grid; 
-  gap: 2rem;
+  gap: 6rem;
   cursor: pointer;
   
 }
 .grid li{
   display: grid;
- 
 }
 
 
@@ -27,7 +24,7 @@
   justify-content: center;
 }
 #header {
-  border-bottom: 1px solid #ebe4e4;
+  border-bottom: 0.0625rem solid #ebe4e4;
   margin-bottom: 2rem;
   display: flex;
   position: fixed;
@@ -42,10 +39,11 @@
 
 footer {
   background: #e9e2e2;
-  min-height: 7.5rem;
+  margin-bottom: -2rem;
 }
 
 footer .logo {
+  margin-bottom: 0.0.625rem;
   display: inline-block;
   color: #ce2e12;
   font-size: 1.5rem;
@@ -53,7 +51,7 @@ footer .logo {
 
 footer .brand p {
   color: #ec920c;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.0.625rem;
   display: flex;
   justify-content: center;
  
@@ -62,6 +60,7 @@ footer .brand p {
 footer i {
   font-size: 1.5rem;
   color: #e70800;
+  min-height: 5.5rem;
   
 }
 

@@ -13,7 +13,7 @@ import { ResidenciaService } from '../residencia-list/residencia.service';
 export class ResidenciaFormComponent implements OnInit {
 
   residenciaForm: FormGroup = this.builder.group({});
-
+  
   action: string = '';
   
 
@@ -26,10 +26,13 @@ export class ResidenciaFormComponent implements OnInit {
     ) {}
 
    ngOnInit(): void {
+    
+
 
     this.action = this.activatedRoute.snapshot.url[0].path;
 
     this.createForm();
+    
 
     if(this.action === 'visualizar'){
       this.residenciaForm.disable();
@@ -52,11 +55,21 @@ export class ResidenciaFormComponent implements OnInit {
         id: null,
         logradouro: [null,[Validators.required,Validators.maxLength(120)]],
         complemento: [null,[Validators.required,Validators.maxLength(120)]],
-        bairro: [null,[Validators.required,Validators.maxLength(120)]],
-        cidade: [null,[Validators.required,Validators.maxLength(20)]],
-        estado: [null,[Validators.required,Validators.maxLength(120)]],
-        pais: [null,[Validators.required,Validators.maxLength(120)]],
+        estado: [null,[Validators.required,Validators.maxLength(20)]],
+        pais: [null,[Validators.required,Validators.maxLength(20)]],
 
+       }),
+
+       cidade: this.builder.group ({
+        id: null,
+        cidade: [null,[Validators.required,Validators.maxLength(20)]],
+        
+       }),
+
+       bairro: this.builder.group ({
+        id: null,
+        bairro: [null,[Validators.required,Validators.maxLength(20)]],
+        
        }),
      
     });
@@ -65,10 +78,19 @@ export class ResidenciaFormComponent implements OnInit {
    get enderecoForm(){
      return this.residenciaForm.get('endereco') as FormGroup;
    }
+   get cidadeForm(){
+    return this.residenciaForm.get('cidade') as FormGroup;
+  }
+  get bairroForm(){
+    return this.residenciaForm.get('bairro') as FormGroup;
+  }
 
    onSave(): void {
       
-    
+    //console.log(this.residenciaForm);
+    //console.log(this.residenciaService);
+    //console.log(this.action);
+
      //função pra ativar error nos campos obrigatorios
      Object.keys(this.residenciaForm.controls)
      .forEach((field) => this.residenciaForm
@@ -79,18 +101,27 @@ export class ResidenciaFormComponent implements OnInit {
      .forEach((field) => this.enderecoForm
      .get(field)?.markAsTouched());
 
+     Object.keys(this.cidadeForm.controls)
+     .forEach((field) => this.cidadeForm
+     .get(field)?.markAsTouched());
+
+     
+     Object.keys(this.bairroForm.controls)
+     .forEach((field) => this.bairroForm
+     .get(field)?.markAsTouched());
+
    // função validar campo do formulario
     if(this.residenciaForm.invalid) {
       return;
     }
 
     this.residenciaService.save(this.residenciaForm.value).subscribe(() => {
-      this.router.navigate(['residencia']);
+      this.router.navigate(['residencias']);
     });
   }
 
    onCancel(): void {
-    this.router.navigate(['residencia']);
+    this.router.navigate(['residencias']);
   }
 
    findById(id: number): void {
