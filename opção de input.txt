@@ -1,9 +1,0 @@
-           <div class="input-group mb-3">
-            <select class="form-select" id="inputGroupSelect02">
-              <option selected>Escolha o tipo de Residencia...</option>
-              <option value="1">Casa</option>
-              <option value="2">Apartamento</option>
-            </select>
-            <label class="input-group-text" for="inputGroupSelect02"
-              >Tipo</label>
-           </div>

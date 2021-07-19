@@ -4,8 +4,6 @@ import { BairroFormComponent } from './bairro-form/bairro-form.component';
 import { BairroListComponent } from './bairro-list/bairro-list.component';
 
 const routes: Routes = [
-
-
   {
     path: '',
     component: BairroListComponent,
@@ -25,14 +23,10 @@ const routes: Routes = [
     path: 'alterar/: id',
     component: BairroFormComponent,
   },
-
-  
-
-
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class BairroRoutingModule { }
+export class BairroRoutingModule {}

@@ -27,17 +27,25 @@ public class Bairro implements Serializable {
     @Column(name = "bairro")
     private String bairro;
 
-
-
     @JoinColumn(name = "cidade_id", referencedColumnName = "id")
     @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL )
     private Cidade cidade;
 
-
-
     @JsonIgnore
     @OneToMany(mappedBy = "bairro")
     private List<Residencia> ResidenciaList;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

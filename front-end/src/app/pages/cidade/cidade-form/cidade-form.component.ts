@@ -6,59 +6,53 @@ import { CidadeService } from '../cidade-list/cidade.service';
 @Component({
   selector: 'app-cidade-form',
   templateUrl: './cidade-form.component.html',
-  styleUrls: ['./cidade-form.component.css']
+  styleUrls: ['./cidade-form.component.css'],
 })
 export class CidadeFormComponent implements OnInit {
-
   cidadeForm: FormGroup = this.builder.group({});
 
   action: string = '';
-  
 
-    constructor(
-    private builder: FormBuilder, 
-    private router: Router, 
+  constructor(
+    private builder: FormBuilder,
+    private router: Router,
     private cidadeService: CidadeService,
     private activatedRoute: ActivatedRoute
-    
-    ) {}
+  ) {}
 
-   ngOnInit(): void {
-
+  ngOnInit(): void {
     this.action = this.activatedRoute.snapshot.url[0].path;
 
     this.createForm();
 
-    if(this.action === 'visualizar'){
+    if (this.action === 'visualizar') {
       this.cidadeForm.disable();
-   }
-      if(this.action !== 'nova'){
-       const id = Number(this.activatedRoute.snapshot.url[1].path)
-       this.findById(id);
-
-      }
+    }
+    if (this.action !== 'nova') {
+      const id = Number(this.activatedRoute.snapshot.url[1].path);
+      this.findById(id);
+    }
   }
 
   createForm(): void {
-       this.cidadeForm = this.builder.group({
-       id: null,
-       cidade: [null,[Validators.required,Validators.maxLength(20)]],
-     
+    this.cidadeForm = this.builder.group({
+      id: null,
+      cidade: [null, [Validators.required, Validators.maxLength(20)]],
     });
   }
-  
-   onSave(): void {
-      //console.log(this.cidadeForm);
-      //console.log(this.cidadeService);
-      //console.log(this.action)
-    
-     //função pra ativar error nos campos obrigatorios
-     Object.keys(this.cidadeForm.controls)
-     .forEach((field) => this.cidadeForm
-     .get(field)?.markAsTouched());
 
-   // função validar campo do formulario
-    if(this.cidadeForm.invalid) {
+  onSave(): void {
+    //console.log(this.cidadeForm);
+    //console.log(this.cidadeService);
+    //console.log(this.action)
+
+    //função pra ativar error nos campos obrigatorios
+    Object.keys(this.cidadeForm.controls).forEach((field) =>
+      this.cidadeForm.get(field)?.markAsTouched()
+    );
+
+    // função validar campo do formulario
+    if (this.cidadeForm.invalid) {
       return;
     }
 
@@ -67,19 +61,18 @@ export class CidadeFormComponent implements OnInit {
     });
   }
 
-   onCancel(): void {
+  onCancel(): void {
     this.router.navigate(['cidades']);
   }
 
-   findById(id: number): void {
-     this.cidadeService
-     .findById(id)
-     .subscribe(response => this.cidadeForm.patchValue(response));
-   }
+  findById(id: number): void {
+    this.cidadeService
+      .findById(id)
+      .subscribe((response) => this.cidadeForm.patchValue(response));
+  }
 
-   onAlterar(): void {
-     this.action = 'alterar';
-     this.cidadeForm.enable();
-   }
-
+  onAlterar(): void {
+    this.action = 'alterar';
+    this.cidadeForm.enable();
+  }
 }

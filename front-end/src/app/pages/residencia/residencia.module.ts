@@ -6,15 +6,8 @@ import { ResidenciaRoutingModule } from './residencia-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/shared/shared.module';
 
-
-
 @NgModule({
-  declarations: [
-  
-    ResidenciaListComponent,
-    ResidenciaFormComponent,
-    
-  ],
+  declarations: [ResidenciaListComponent, ResidenciaFormComponent],
   imports: [
     ResidenciaRoutingModule,
     CommonModule,
@@ -23,6 +16,5 @@ import { SharedModule } from 'src/shared/shared.module';
     SharedModule,
   ],
   providers: [],
- 
 })
-export class ResidenciaModule { }
+export class ResidenciaModule {}

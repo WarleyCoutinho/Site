@@ -1,9 +1,9 @@
 export interface Residencia {
-  id:number;
+  id: number;
   tipo: CharacterData;
-  
+
   valor: number;
-  comodos: CharacterData ;
+  comodos: CharacterData;
 
   logradouro: string;
   complemento: string;
@@ -13,5 +13,4 @@ export interface Residencia {
   cidade: CharacterData;
 
   bairro: string;
-
 }

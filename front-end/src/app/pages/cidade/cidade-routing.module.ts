@@ -4,8 +4,6 @@ import { CidadeFormComponent } from './cidade-form/cidade-form.component';
 import { CidadeListComponent } from './cidade-list/cidade-list.component';
 
 const routes: Routes = [
-
-
   {
     path: '',
     component: CidadeListComponent,
@@ -25,11 +23,10 @@ const routes: Routes = [
     path: 'alterar/: id',
     component: CidadeFormComponent,
   },
-
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class CidadeRoutingModule { }
+export class CidadeRoutingModule {}

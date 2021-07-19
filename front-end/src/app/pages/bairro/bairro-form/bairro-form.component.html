@@ -5,22 +5,28 @@
         <div class="col-md-6">
           <app-field-validation [required]="true">
             <label label for="bairro" class="form-label">Bairro</label>
-            <input input formControlName="bairro" type="text" id="bairro" class="form-control" />
+            <input
+              input
+              formControlName="bairro"
+              type="text"
+              id="bairro"
+              class="form-control"
+            />
           </app-field-validation>
         </div>
       </div>
     </form>
   </div>
-    <div class="card-footer">
-      <div class="buttons float-right">
-        <div *ngIf="action !== 'visualizar'">
-          <button class="btn btn-success" (click)="onSave()">Salvar</button>
-          <button class="btn btn-danger" (click)="onCancel()">Cancelar</button>
-        </div>
-        <div *ngIf="action === 'visualizar'">
-          <button class="btn btn-default" (click)="onAlterar()">Alterar</button>
-          <button class="btn btn-default" (click)="onCancel()">Voltar</button>
-        </div>
+  <div class="footer">
+    <div>
+      <div *ngIf="action !== 'visualizar'">
+        <button class="btn btn-success" (click)="onSave()">Salvar</button>
+        <button class="btn btn-danger" (click)="onCancel()">Cancelar</button>
+      </div>
+      <div *ngIf="action === 'visualizar'">
+        <button class="btn btn-default" (click)="onAlterar()">Alterar</button>
+        <button class="btn btn-default" (click)="onCancel()">Voltar</button>
       </div>
     </div>
   </div>
+</div>

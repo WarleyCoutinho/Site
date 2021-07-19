@@ -4,8 +4,6 @@ import { ResidenciaFormComponent } from './residencia-form/residencia-form.compo
 import { ResidenciaListComponent } from './residencia-list/residencia-list.component';
 
 const routes: Routes = [
-
-
   {
     path: '',
     component: ResidenciaListComponent,
@@ -25,12 +23,10 @@ const routes: Routes = [
     path: 'alterar/: id',
     component: ResidenciaFormComponent,
   },
-
-
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ResidenciaRoutingModule { }
+export class ResidenciaRoutingModule {}

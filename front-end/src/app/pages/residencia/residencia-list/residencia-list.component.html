@@ -1,6 +1,17 @@
 <div class="card">
   <div class="card-body">
-    <button class="btn btn-primary" [routerLink]="['nova']">Adicionar</button>
+    <button class="btn btn-primary" [routerLink]="['nova']">
+      Cadastrar Casas e Apartamentos
+    </button>
+    <div class="p">Obs:</div>
+    <div class="p">
+      Aqui e permitido o cadastro de Casas e Apartamentos para gerar uma lista
+      de residências,
+    </div>
+    <div class="p">
+      Que tenho a disponíveis para que possam ser visualizadas para serem
+      alugadas.
+    </div>
     <table class="table">
       <thead>
         <tr>
@@ -8,30 +19,27 @@
           <th scope="col">Imoveis</th>
           <th scope="col">Valor do aluguel</th>
           <th scope="col">Cômodos</th>
-          <th scope="col" class="text-center">ações</th>
+          <th scope="col">Bairro</th>
+          <th scope="col" class="text-center">Ações</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let residencia of residenciaList">
           <td>{{ residencia.id }}</td>
-          <td class="btn tex-primary">
-            <a [routerLink]="['visualizar', residencia.id]">
-              {{ residencia.tipo }}
-            </a>
-          </td>
-          <td>{{ residencia.valor }}</td>
-          <td>
-            {{ residencia.comodos }}
-          </td>
+          <td>{{ residencia.tipo }}</td>
+          <td>R$ {{ residencia.valor }}</td>
+          <td>{{ residencia.comodos }}</td>
+          <td>{{ "Bairro" }}</td>
+
           <td class="text-center buttons">
             <button
-              class="btn btn-primary"
-              [routerLink]="['alterar', residencia.id]"
+              class="btn btn-info"
+              [routerLink]="['visualizar', residencia.id]"
             >
-              Alterar
+              Detalhes do Imóveis
             </button>
             <button class="btn btn-danger" (click)="onDelete(residencia.id)">
-              Deletar
+              Excluir Lista
             </button>
           </td>
         </tr>

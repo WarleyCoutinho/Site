@@ -6,17 +6,8 @@ import { BairroRoutingModule } from '../bairro/bairro-routing.module';
 import { BairroFormComponent } from './bairro-form/bairro-form.component';
 import { BairroListComponent } from './bairro-list/bairro-list.component';
 
-
-
-
 @NgModule({
-  declarations: [
-  
-    BairroListComponent,
-    BairroFormComponent,
-    
-    
-  ],
+  declarations: [BairroListComponent, BairroFormComponent],
   imports: [
     BairroRoutingModule,
     CommonModule,
@@ -25,6 +16,5 @@ import { BairroListComponent } from './bairro-list/bairro-list.component';
     SharedModule,
   ],
   providers: [],
- 
 })
-export class BairroModule { }
+export class BairroModule {}

@@ -1,21 +1,46 @@
 <div class="card">
   <div class="card-body">
+    <button class="btn btn-primary" [routerLink]="['nova']">
+      Manter Lista de Cidade
+    </button>
+    <div class="p">Obs:</div>
+    <div class="p">
+      É Permitido a exclusão somente da Lista que não tem Vinculo com nenhuma
+      residência,
+    </div>
+    <div class="p">Caso ao contrário somente nas listagens de residência.</div>
     <table class="table">
       <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Nome</th>
-          <th scope="col" class="text-center"></th>
+          <th scope="col" class="text-center">Ações</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let cidade of cidadeList">
           <td>{{ cidade.id }}</td>
-          <ol class="list-group list-group-numbered">
-            <a class="list-group-item"[routerLink]="['visualizar', cidade.id]">
-              {{ cidade.cidade }}
-            </a>
-          </ol>
+          <td>{{ cidade.cidade }}</td>
+          <td class="text-center buttons">
+            <button
+              class="btn btn-info"
+              [routerLink]="['visualizar', cidade.id]"
+            >
+              Ver
+            </button>
+            <div class="btn-group">
+              <a
+                href="residencias"
+                class="btn btn-success active"
+                aria-current="page"
+              >
+                Cadastrar Casas e Apartamentos</a
+              >
+            </div>
+            <button class="btn btn-danger" (click)="onDelete(cidade.id)">
+              Excluir Lista
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>

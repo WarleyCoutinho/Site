@@ -35,3 +35,6 @@
     A conclusão total do projeto não é obrigatória, pois cada etapa possui uma pontuação separada.
 
     Obs: Utilizar relação One To Many de Cidade para Bairro, Bairro para Residências.
+
+
+

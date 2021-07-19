@@ -6,16 +6,8 @@ import { CidadeListComponent } from './cidade-list/cidade-list.component';
 import { CidadeFormComponent } from './cidade-form/cidade-form.component';
 import { CidadeRoutingModule } from './cidade-routing.module';
 
-
-
 @NgModule({
-  declarations: [
-  
-    CidadeListComponent,
-    CidadeFormComponent,
-    
-    
-  ],
+  declarations: [CidadeListComponent, CidadeFormComponent],
   imports: [
     CidadeRoutingModule,
     CommonModule,
@@ -24,6 +16,5 @@ import { CidadeRoutingModule } from './cidade-routing.module';
     SharedModule,
   ],
   providers: [],
- 
 })
-export class CidadeModule { }
+export class CidadeModule {}

@@ -43,8 +43,8 @@ public class Residencia implements Serializable {
         @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL )
         private Bairro bairro;
 
+
         @JoinColumn(name = "cidade_id", referencedColumnName = "id")
         @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL )
         private Cidade cidade;
-
 }

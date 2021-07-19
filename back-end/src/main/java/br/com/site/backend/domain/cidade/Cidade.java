@@ -2,6 +2,7 @@ package br.com.site.backend.domain.cidade;
 
 import br.com.site.backend.domain.bairro.Bairro;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,5 +27,20 @@ public class Cidade implements Serializable {
 
     @JsonIgnore
     @OneToMany(mappedBy = "cidade")
-    private List<Bairro> ListBairro;
+    private List<Bairro> BairroList;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

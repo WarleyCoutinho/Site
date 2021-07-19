@@ -5,25 +5,24 @@ import { BairroService } from './bairro.service';
 @Component({
   selector: 'app-bairro-list',
   templateUrl: './bairro-list.component.html',
-  styleUrls: ['./bairro-list.component.css']
+  styleUrls: ['./bairro-list.component.css'],
 })
 export class BairroListComponent implements OnInit {
-  bairroList: Bairro[] =[];
+  bairroList: Bairro[] = [];
 
-  constructor(private bairroService: BairroService) { }
+  constructor(private bairroService: BairroService) {}
 
   ngOnInit(): void {
     this.findAll();
   }
 
-  findAll(): void{
+  findAll(): void {
     this.bairroService
-    .fiandAll()
-    .subscribe((response) => (this.bairroList = response));
+      .fiandAll()
+      .subscribe((response) => (this.bairroList = response));
   }
 
   onDelete(id: number): void {
-    this.bairroService.deleteByid(id).subscribe(()=> this.findAll() );
+    this.bairroService.deleteByid(id).subscribe(() => this.findAll());
   }
-
 }

@@ -1,5 +1,5 @@
 export interface Bairro {
-  id:number;
+  id: number;
   bairro: CharacterData;
-  
+  cidade: CharacterData;
 }
