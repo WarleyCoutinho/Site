@@ -39,10 +39,7 @@ mat-toolbar a:hover,
 mat-toolba a:active {
   color: #f87306;
 }
-.navbar{
-  color: #f87306;
-  text-shadow: 0.0625rem 0.0625rem 0.0625rem black;
-}
+
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;

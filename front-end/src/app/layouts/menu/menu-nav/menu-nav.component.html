@@ -7,11 +7,10 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false"
   >
-    <mat-toolbar color="primary">Menu</mat-toolbar>
-    <nav class="navbar navbar-expand-lg navbar-dark-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar" >Abrir Menu</span>
+        <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
           <mat-nav-list>
@@ -38,10 +37,10 @@
           </mat-nav-list>
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Ações do proprietário
               </a>
-              <ul class="dropdown-menu dropdown-menu-primary" aria-labelledby="navbarDarkDropdownMenuLink">
+              <ul class="dropdown-menu " aria-labelledby="navbarScrollingDropdown">
                 <li><a class="dropdown-item" href="/residencias">Manter Lista Residencia</a></li>
                 <mat-divider></mat-divider>
                 <li><a class="dropdown-item" href="/cidades">Manter Lista Cidade</a></li>
@@ -98,6 +97,10 @@
               </ul>
             </li>
           </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Buscar</button>
+          </form>
         </div>
       </div>
     </nav>

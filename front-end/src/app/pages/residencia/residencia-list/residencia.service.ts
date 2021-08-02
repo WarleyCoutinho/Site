@@ -9,9 +9,9 @@ import { Residencia } from '../residencia';
 export class ResidenciaService {
   ///endereço da API do back end
   protected url = `http://localhost:8080/residencias`;
+  
   ///endereço da API do back end em produção
   ///protected url = `https://wc-system-api.herokuapp.com/residencias`;
-
   constructor(private http: HttpClient) {}
 
   ////função de listar
