@@ -1,0 +1,25 @@
+
+
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1px;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  min-height: fit-content;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  width: 96vw;
+  height: 96vw;
+  background: url("../../../assets/fotos/CasaxApartamento.png");
+  border-radius: 2rem;
+}
+
+
+
+

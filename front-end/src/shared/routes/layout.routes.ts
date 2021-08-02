@@ -24,5 +24,12 @@ export const CONTENT_ROUTES: Routes =[
       (m) => m.BairroModule
       ),
   },
+  {
+    path: 'home',
+    loadChildren: () => 
+    import('../../app/pages/home/home.module').then(
+      (m) => m.HomeModule
+      ),
+  },
   
 ];

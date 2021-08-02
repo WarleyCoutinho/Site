@@ -9,6 +9,10 @@ import { Cidade } from '../cidade';
 export class CidadeService {
   ///endereço da API do back end
   protected url = `http://localhost:8080/cidades`;
+  
+  ///endereço da API do back end em produção
+  ///protected url = `https://wc-system-api.herokuapp.com/cidades`;
+
 
   constructor(private http: HttpClient) {}
 

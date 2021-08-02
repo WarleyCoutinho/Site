@@ -43,9 +43,9 @@ export class BairroFormComponent implements OnInit {
   }
 
   onSave(): void {
-    console.log(this.bairroForm);
-    console.log(this.bairroService);
-    console.log(this.action);
+    //console.log(this.bairroForm);
+    //console.log(this.bairroService);
+    //console.log(this.action);
 
     //função pra ativar error nos campos obrigatorios
     Object.keys(this.bairroForm.controls).forEach((field) =>

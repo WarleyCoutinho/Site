@@ -1,12 +1,21 @@
 .footer button {
   margin-left: 9.375rem;
+  border-radius: 2rem;
 }
 .footer:active {
   transform: scale(1.05);
 }
+table {
+  width: 100%;
+  min-height: fit-content;
+}
 .card {
-  min-width: 50rem;
+  min-height: fit-content;
+  max-width: max-content;
+  margin-top: 4.6875rem;
+  margin-bottom: 0.3125rem;
   background-color: #f87306;
+  border-radius: 2rem;
 }
 .row {
   margin: 1.5rem 0;

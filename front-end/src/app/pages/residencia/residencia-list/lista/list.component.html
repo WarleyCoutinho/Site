@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-body">
+    <div class="p">Lista de residencias</div>
+    <table >
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Imoveis</th>
+          <th scope="col">Valor do aluguel</th>
+          <th scope="col">Cômodos</th>
+          <th scope="col">Bairro</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let residencia of residenciaList">
+          <td>{{ residencia.id }}</td>
+          <td>{{ residencia.tipo }}</td>
+          <td>R$ {{ residencia.valor }}</td>
+          <td>{{ residencia.comodos }}</td>
+          <td>{{ "Bairro" }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

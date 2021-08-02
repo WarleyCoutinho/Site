@@ -1,0 +1,83 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 220px;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
+}
+.logo span {
+  color: #ffff;
+}
+.logo a {
+  color: #f87306;
+  font-size: 1.5rem;
+  text-shadow: 0.0625rem 0.0625rem 0.0625rem black;
+}
+a:hover,
+a:active {
+  color: white;
+}
+
+toggle-icon {
+  color: #f87306;
+}
+.mat-list-item {
+  color: #f87306;
+}
+.nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+}
+a {
+  text-decoration: none;
+  color: #f87306;
+  text-shadow: 0.0625rem 0.0625rem 0.0625rem black;
+}
+
+mat-toolbar a:hover,
+mat-toolba a:active {
+  color: #f87306;
+}
+.navbar{
+  color: #f87306;
+  text-shadow: 0.0625rem 0.0625rem 0.0625rem black;
+}
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+mat-toolbar a {
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+mat-toolbar {
+  border-radius: 2rem;
+}
+
+@media (max-width: 667px) {
+  .menu-list {
+    display: none;
+  }
+  .logo {
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidenav {
+    display: none;
+  }
+}
+
+@media (max-width: 959px) {
+  mat-toolbar {
+    border-radius: 0px;
+  }
+}

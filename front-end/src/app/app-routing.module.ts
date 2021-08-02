@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CONTENT_ROUTES } from 'src/shared/routes/content-layout.routes';
-import { ContentLayoutComponent } from './layouts/content-layout/content-layout.component';
+import { CONTENT_ROUTES } from 'src/shared/routes/layout.routes';
+import { LayoutComponent } from './layouts/layout/layout.component';
+
+
 
 const routes: Routes = [
   {
     path: '',
-    component: ContentLayoutComponent,
+    component: LayoutComponent,
     children: CONTENT_ROUTES,
   },
 ];

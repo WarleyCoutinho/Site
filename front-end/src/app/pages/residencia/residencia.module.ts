@@ -5,9 +5,10 @@ import { ResidenciaFormComponent } from './residencia-form/residencia-form.compo
 import { ResidenciaRoutingModule } from './residencia-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/shared/shared.module';
+import { ListComponent } from './residencia-list/lista/list.component';
 
 @NgModule({
-  declarations: [ResidenciaListComponent, ResidenciaFormComponent],
+  declarations: [ResidenciaListComponent, ResidenciaFormComponent,ListComponent],
   imports: [
     ResidenciaRoutingModule,
     CommonModule,

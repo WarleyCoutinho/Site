@@ -5,9 +5,10 @@ import { SharedModule } from 'src/shared/shared.module';
 import { CidadeListComponent } from './cidade-list/cidade-list.component';
 import { CidadeFormComponent } from './cidade-form/cidade-form.component';
 import { CidadeRoutingModule } from './cidade-routing.module';
+import { ListComponent } from './cidade-list/lista/list.component';
 
 @NgModule({
-  declarations: [CidadeListComponent, CidadeFormComponent],
+  declarations: [CidadeListComponent, CidadeFormComponent,ListComponent],
   imports: [
     CidadeRoutingModule,
     CommonModule,

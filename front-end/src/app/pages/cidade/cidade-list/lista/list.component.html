@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-body">
+    <div class="p">Lista de Cidades</div>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cidade of cidadeList">
+          <td>{{ cidade.id }}</td>
+          <td>{{ cidade.cidade }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
